@@ -15,7 +15,7 @@ exports.run = async (bot, message, args) =>
     return message.channel.send(embed)
     } else {
         if (money[message.author.id].money >= '750000') {
-            message.member.addRole('744888543997984859').catch(console.error);
+            message.member.addRole(myRole).catch(console.error);
             
             money[message.author.id].money -= '750000';
             fs.writeFile("./money.json", JSON.stringify(money), (err) => {
