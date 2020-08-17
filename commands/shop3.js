@@ -8,7 +8,7 @@ exports.run = async (bot, message, args) =>
     let embed = new Discord.RichEmbed();
     embed.setTitle('Bolt')
 
-    let myRole = message.guild.roles.get("744888543997984859");
+    let myRole = message.member.roles.find(r => r.name === "VIP+")
     if(message.member.roles.some(r=>["VIP+"].includes(r.name)) ) {
     embed.setDescription('Te már rendelkezel ezzel a rangal vagy nagyobbal!')
     embed.setColor(colors.világos_piros)
