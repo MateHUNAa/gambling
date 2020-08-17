@@ -13,6 +13,7 @@ exports.run = async (bot, message, args, moment) =>
     .addField('**e?pay**', 'Át tudsz utali pénzt!')
     .addField('**e?money**', `Óránkénti pénz`)
     .addField('**e?daily**', 'Napi pénz')
+    .addField('**e?shop**', 'Meg mutatja mit tudsz venni')
 message.channel.send(embed)
 }
 
