@@ -8,7 +8,7 @@ var bot = new commando.Client ({
 });
 
 
-bot.login(configs.token)
+bot.login(process.env.token)
 
 bot.on('ready', () => {
     console.log(`[${bot.user.username}] Elindult ennyi szerveren ${bot.guilds.size}`)
@@ -89,22 +89,3 @@ y.addListener("data", res => {
     let x = res.toString().trim().split(/ +/g)
     bot.channels.get('728586908375973898').send(x.join(" "));
 });
-
-/*
-static void UpdatePresence()
-{
-    DiscordRichPresence discordPresence;
-    memset(&discordPresence, 0, sizeof(discordPresence));
-    discordPresence.state = "Solo Coding";
-    discordPresence.details = "Programing";
-    discordPresence.startTimestamp = 1507665886;
-    discordPresence.endTimestamp = 1507665886;
-    discordPresence.largeImageText = "Yes";
-    discordPresence.smallImageText = "I trying My Best";
-    discordPresence.partyId = "ae488379-351d-4a4f-ad32-2b9b01c91657";
-    discordPresence.partySize = 1;
-    discordPresence.partyMax = 2;
-    discordPresence.spectateSecret = "MTIzNDV8MTIzNDV8MTMyNDU0";
-    discordPresence.joinSecret = "MTI4NzM0OjFpMmhuZToxMjMxMjM= ";
-    Discord_UpdatePresence(&discordPresence);
-}*/
