@@ -56,7 +56,7 @@ exports.run = async (bot, message, args) =>
         return message.channel.send(embed)
     }
 
-    let chances = ["win", "win", "lose", "lose"]
+    let chances = ["win", /*"win", "lose",*/ "lose"]
     var pick = chances[Math.floor(Math.random() * chances.length)];
 
     if(pick == "lose") {

@@ -29,6 +29,7 @@ exports.run = async (bot, message, args, prefix) =>
         message.channel.send(data, {
             code: 'mb'
         })
+        message.delete()
 })
 }
 
