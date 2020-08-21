@@ -8,11 +8,11 @@ exports.run = async (bot, message, args) =>
 
     let embed = new Discord.RichEmbed();
 
-    if(message.author.id === '648150131354632192') {
+    /*if(message.author.id === '648150131354632192') {
         embed.setColor(colors.világos_piros);
         embed.setDescription(`${message.author.tag} Te nem használhatod ez a parancsot!`)
         return message.channel.send(embed);
-    }
+    }*/
 
     var maxBet = 100000; 
 
@@ -56,7 +56,7 @@ exports.run = async (bot, message, args) =>
         return message.channel.send(embed)
     }
 
-    let chances = ["win", /*"win", "lose",*/ "lose"]
+    let chances = ["win", "lose"]
     var pick = chances[Math.floor(Math.random() * chances.length)];
 
     if(pick == "lose") {
