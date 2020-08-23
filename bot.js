@@ -83,9 +83,3 @@ bot.on('message', message => {
 });
 
 //-------------------------------------
-console.log('Console Chatter loaded!')
-let y = process.openStdin()
-y.addListener("data", res => {
-    let x = res.toString().trim().split(/ +/g)
-    bot.channels.get('728586908375973898').send(x.join(" "));
-});
