@@ -9,22 +9,21 @@ const colors = require('../color.json');
 exports.run = async (bot, message, args) =>
 { 
 
-
-    let timeout = 86400000;
-    let reward = 15000;
-
     let embed = new Discord.RichEmbed();
 	embed.setTitle("NAPI JUTALOM!");
-	if(message.member.roles.some(r=>["VIP+"].includes(r.name)) ) {
-        embed.setDescription(`${message.author.tag} Te rendelkezel \`Vip+\` ranggal használd a \`e?daily2\`.`)
+
+    if(!message.member.roles.some(r=>["VIP+"].includes(r.name)) ) {
+        embed.setDescription(`${message.author.tag} Te nem rendelkezel \`VIP+\` rangal`)
         return message.channel.send(embed)
        }
-	   
-    if(message.author.id === '648150131354632192') {
+    let timeout = 86400000;
+    let reward = 25000;
+
+   /* if(message.author.id === '648150131354632192') {
         embed.setColor(colors.világos_piros);
         embed.setDescription(`${message.author.tag} Te nem használhatod ez a parancsot!`)
         return message.channel.send(embed);
-    }
+    }*/
 
     if(!money[message.author.id]) {
 
@@ -116,6 +115,6 @@ exports.run = async (bot, message, args) =>
 }
 
 module.exports.help = {
-    name:'daily',
+    name:'daily2',
     aliases: []
 }
