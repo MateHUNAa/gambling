@@ -61,8 +61,8 @@ bot.on('message', message => {
     if (cooldown.has(message.author.id)) {
         message.delete()
         embed.setColor(colors.sötét_piros)
-        embed.setDescription(`${message.author.tag} Várnod kell 3mp- et hogy használhasd a következő parancsot!`, true)
-        embed.setFooter(`error: \`LIGHT ERROR\``, message.author.displayAvatarURL, true)
+        embed.setDescription(`${message.author.tag} Várnod kell 3mp- et hogy használhasd a következő parancsot!`)
+        embed.setFooter(`error: \`LIGHT ERROR\``, message.author.displayAvatarURL)
         return message.channel.send(embed)
     }
         cooldown.add(message.author.id);
